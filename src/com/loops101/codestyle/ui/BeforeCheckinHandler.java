@@ -1,4 +1,4 @@
-package com.loops101.ui;
+package com.loops101.codestyle.ui;
 
 import com.intellij.openapi.fileEditor.FileDocumentManager;
 import com.intellij.openapi.project.Project;
@@ -7,21 +7,21 @@ import com.intellij.openapi.vcs.checkin.CheckinHandler;
 import com.intellij.openapi.vcs.checkin.CheckinMetaHandler;
 import com.intellij.openapi.vcs.ui.RefreshableOnComponent;
 import com.intellij.openapi.vfs.VirtualFile;
-import com.loops101.CodeStyleBeforeCheckinProcessor;
+import com.loops101.codestyle.Processor;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.Collection;
 
-public class CodestyleBeforeCheckinHandler extends CheckinHandler implements CheckinMetaHandler {
+public class BeforeCheckinHandler extends CheckinHandler implements CheckinMetaHandler {
 
     private final Project myProject;
     private boolean applyCodeStyle = true;
     private final CheckinProjectPanel myPanel;
 
 
-    public CodestyleBeforeCheckinHandler(final Project project, final CheckinProjectPanel panel) {
+    public BeforeCheckinHandler(final Project project, final CheckinProjectPanel panel) {
         myProject = project;
         myPanel = panel;
     }
@@ -69,7 +69,7 @@ public class CodestyleBeforeCheckinHandler extends CheckinHandler implements Che
 
         if (applyCodeStyle) {
             final Collection<VirtualFile> files = myPanel.getVirtualFiles();
-            CodeStyleBeforeCheckinProcessor.run(myProject, files, performCheckoutAction);
+            Processor.run(myProject, files, performCheckoutAction);
         } else {
             performCheckoutAction.run();
         }

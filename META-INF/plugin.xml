@@ -2,11 +2,11 @@
 
     <id>com.loops101.codestyle.hook</id>
     <name>Code Style Hook</name>
-    <version>1.0</version>
+    <version>1.1</version>
     <vendor email="idea@101loops.com" url="http://www.101loops.com">101 Loops</vendor>
 
     <description><![CDATA[
-      Plugin to apply the project's code style to changed files on commit.
+      Plugin to apply the project's code style to a subset of the changed files on commit.
     ]]></description>
 
     <change-notes><![CDATA[]]>
@@ -18,13 +18,16 @@
     </application-components>
 
     <project-components>
+        <component>
+            <implementation-class>com.loops101.codestyle.settings.SettingsComponent</implementation-class>
+        </component>
     </project-components>
 
     <actions>
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">
-        <checkinHandlerFactory implementation="com.loops101.ui.CodestyleCheckinHandlerFactory"/>
+        <checkinHandlerFactory implementation="com.loops101.codestyle.ui.CheckinHandlerFactory"/>
     </extensions>
 
 </idea-plugin>
