@@ -6,8 +6,7 @@
     <vendor email="idea@101loops.com" url="http://www.101loops.com">101 Loops</vendor>
 
     <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
+      Plugin to apply the project's code style to changed files on commit.
     ]]></description>
 
     <change-notes><![CDATA[]]>

@@ -1,7 +1,7 @@
 Codestyle Hook
 ==========
 
-An IDEA IntelliJ plugin to apply the project code style on commit.
+An IDEA IntelliJ plugin to apply the project's code style to changed files on commit.
 
 
 ### ToDos
