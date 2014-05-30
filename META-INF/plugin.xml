@@ -1,7 +1,7 @@
 <idea-plugin version="2">
 
     <id>com.loops101.codestyle.hook</id>
-    <name>Codestyle Hook</name>
+    <name>Code Style Hook</name>
     <version>1.0</version>
     <vendor email="idea@101loops.com" url="http://www.101loops.com">101 Loops</vendor>
 
