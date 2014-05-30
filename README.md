@@ -1,4 +1,4 @@
-Codestyle Hook
+Code Style Hook
 ==========
 
 An IDEA IntelliJ plugin to apply the project's code style to changed files on commit.
@@ -6,8 +6,4 @@ An IDEA IntelliJ plugin to apply the project's code style to changed files on co
 
 ### ToDos
 
-- run "Optimize imports"
-- run "Rearrange code"  
-- allow configuration
-    - choose which processors to run
-    - set extension filter
+- allow to configure file filter

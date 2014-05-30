@@ -7,7 +7,7 @@ import com.intellij.openapi.vcs.checkin.CheckinHandler;
 import com.intellij.openapi.vcs.checkin.CheckinMetaHandler;
 import com.intellij.openapi.vcs.ui.RefreshableOnComponent;
 import com.intellij.openapi.vfs.VirtualFile;
-import com.loops101.CodestyleHookProcessor;
+import com.loops101.CodeStyleBeforeCheckinProcessor;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
@@ -69,7 +69,7 @@ public class CodestyleBeforeCheckinHandler extends CheckinHandler implements Che
 
         if (applyCodeStyle) {
             final Collection<VirtualFile> files = myPanel.getVirtualFiles();
-            CodestyleHookProcessor.reformat(myProject, files, performCheckoutAction);
+            CodeStyleBeforeCheckinProcessor.run(myProject, files, performCheckoutAction);
         } else {
             performCheckoutAction.run();
         }
