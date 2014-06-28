@@ -31,6 +31,8 @@ public class BeforeCheckinHandler extends CheckinHandler implements CheckinMetaH
     @Nullable
     public RefreshableOnComponent getBeforeCheckinConfigurationPanel() {
         final JCheckBox codestyleBox = new JCheckBox("Code Style Hook");
+        codestyleBox.setEnabled(false);
+        codestyleBox.setSelected(true);
 
         return new RefreshableOnComponent() {
             @Override
@@ -46,12 +48,10 @@ public class BeforeCheckinHandler extends CheckinHandler implements CheckinMetaH
 
             @Override
             public void saveState() {
-                applyCodeStyle = codestyleBox.isSelected();
             }
 
             @Override
             public void restoreState() {
-                codestyleBox.setSelected(applyCodeStyle);
             }
         };
 
