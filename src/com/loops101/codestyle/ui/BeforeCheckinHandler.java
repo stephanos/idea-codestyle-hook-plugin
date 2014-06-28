@@ -67,12 +67,12 @@ public class BeforeCheckinHandler extends CheckinHandler implements CheckinMetaH
             }
         };
 
-        if (applyCodeStyle) {
-            final Collection<VirtualFile> files = myPanel.getVirtualFiles();
-            Processor.run(myProject, files, performCheckoutAction);
-        } else {
-            performCheckoutAction.run();
-        }
+        //if (applyCodeStyle) {
+        final Collection<VirtualFile> files = myPanel.getVirtualFiles();
+        Processor.run(myProject, files, performCheckoutAction);
+        //} else {
+        //    performCheckoutAction.run();
+        //}
     }
 
 }
