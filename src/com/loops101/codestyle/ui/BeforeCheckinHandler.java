@@ -30,7 +30,7 @@ public class BeforeCheckinHandler extends CheckinHandler implements CheckinMetaH
     @Override
     @Nullable
     public RefreshableOnComponent getBeforeCheckinConfigurationPanel() {
-        final JCheckBox codestyleBox = new JCheckBox("Apply coding style");
+        final JCheckBox codestyleBox = new JCheckBox("Code Style Hook");
 
         return new RefreshableOnComponent() {
             @Override
