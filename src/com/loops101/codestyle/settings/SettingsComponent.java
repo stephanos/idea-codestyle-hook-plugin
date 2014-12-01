@@ -13,7 +13,10 @@ import org.jetbrains.annotations.Nullable;
 import javax.swing.*;
 
 @State(name = "CodeStyleHookSettings",
-        storages = {@Storage(id = "other", file = StoragePathMacros.PROJECT_FILE)})
+        storages = {
+                @Storage(file = StoragePathMacros.PROJECT_FILE),
+                @Storage(file = StoragePathMacros.PROJECT_CONFIG_DIR)
+        })
 public class SettingsComponent implements Configurable, ProjectComponent, PersistentStateComponent<Settings> {
 
     @NotNull
